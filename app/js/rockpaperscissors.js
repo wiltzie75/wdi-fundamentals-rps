@@ -36,22 +36,21 @@ function getComputerMove(move) {
 }
 
 function getWinner(playerMove,computerMove) {
-    var winner;
-    if(playerMove === 'rock' && computerMove === 'scissors'){
-    winner = 'player';
-  } else if (playerMove === 'scissors' && computerMove === 'paper'){
-    winner = 'player';
-  } else if (playerMove === 'paper' && computerMove === 'rock'){
-    winner = 'player';
-  } else if(computerMove === 'rock' && playerMove === 'scissors'){
-    winner = 'computer';
-  } else if(computerMove === 'scissors' && playerMove === 'paper'){
-    winner = 'computer';
-  } else if(computerMove === 'paper' && playerMove === 'rock'){
-    winner = 'computer';
-  } else(playerMove === computerMove){
-    winner = 'tie';
-  }
+    if (playerMove === 'rock' && computerMove === 'scissors') {
+      winner = 'player';
+    } else if (playerMove === 'paper' && computerMove === 'rock') {
+      winner = 'player';
+    } else if (playerMove === 'scissors' && computerMove === 'paper') {
+      winner = 'player';
+    } else if (computerMove === 'rock' && playerMove === 'scissors') {
+      winner = 'computer';
+    } else if (computerMove === 'paper' && playerMove === 'rock') {
+      winner = 'computer';
+    } else if (computerMove === 'scissors' && playerMove === 'paper') {
+      winner = 'computer';
+    } else {
+      winner = 'tie';
+    }
     return winner;
 }
 
